@@ -1,0 +1,81 @@
+.chat{
+    flex: 2;
+    border-left: 1px solid #d3c3c3;
+    border-right:  1px solid #d3c3c3;
+    height: 100%;
+}
+.top{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #d3c3c3;
+
+    .users{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .text{
+            display: flex;flex-direction: column;
+            gap: 5px;
+
+            span{
+                font-size: 18px;
+                font-weight: bold;
+            }
+            p{
+                font-size: 14px;
+                font-weight: 300;
+                color: #d3c3c3;;
+            }
+        }
+    }
+}
+.icon{
+    display: flex;
+    gap: 15px;
+    font-size: 1.5rem;
+}
+.bottom{
+   display: flex; 
+   padding: 15px;
+   align-items: center;
+   justify-content: space-between;
+   border-top:1px solid #d3c3c3;
+   gap: 20px;
+
+   .iconn{
+        display: flex;
+        gap: 15px;
+        font-size: 1.2rem;
+   }
+}
+.myMessage{
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color:white;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    background: rgba(2, 84, 64, 0.5);
+}
+.sendbtn{
+    background: green;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.emoji{
+    position: relative;
+}
+.emojiBox{
+    position: absolute;
+    top: 35px;
+    right: 13px;
+    overflow-y: auto;
+}
