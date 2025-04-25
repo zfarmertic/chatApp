@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './chat.css'
 import { RxAvatar } from "react-icons/rx";
 import { IoIosInformationCircle } from "react-icons/io";
@@ -9,11 +9,19 @@ import { GoImage } from "react-icons/go";
 import { FiCamera } from "react-icons/fi";
 import { FiMic } from "react-icons/fi";
 import EmojiPicker from 'emoji-picker-react'
-
+import profile from '../../assets/myAssets/profile.png'
+import back from '../../assets/myAssets/background.jpg'
 
 const Chat = () => {
   const[emoji, setEmoji] = useState(false)
   const [message, setMessage] = useState("")
+
+  const endRef = useRef(null)
+
+  useEffect(()=>{
+      endRef.current?.scrollIntoView({behavior:"smooth"})
+  },[])
+
   function handleEmojiPicker(){
     setEmoji(!emoji)
   }
@@ -36,7 +44,60 @@ const Chat = () => {
           <IoIosInformationCircle />
         </div>
       </div>
-      <div className="center"></div>
+      <div className="center">
+        <div className="message">
+          <img src={profile} alt="" style={{width:"30px", height:"30px"}}/>
+          <div className="texts">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore tenetur soluta necessitatibus inventore cum, ea minima? Suscipit assumenda maxime explicabo soluta laborum.
+            </p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="message own">
+          <div className="texts">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Tempore tenetur soluta necessitatibus inventore cum, ea minima? Suscipit 
+               assumenda maxime explicabo soluta laborum.
+            </p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="message">
+          <img src={profile} alt="" style={{width:"30px", height:"30px"}}/>
+          <div className="texts">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore tenetur soluta necessitatibus inventore cum, ea minima? Suscipit assumenda maxime explicabo soluta laborum.
+            </p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        {/* <div className="message">
+          <img src={profile} alt="" style={{width:"30px", height:"30px"}}/>
+          
+          <span>1 min ago</span>
+        </div> */}
+        <div className="message own">
+          <div className="texts">
+          <img src={back} alt="" style={{width:"300px", height:"200px", objectFit:"cover"}}/>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore tenetur soluta necessitatibus inventore cum, ea minima? Suscipit assumenda maxime explicabo soluta laborum.
+            </p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div className="message">
+        <img src={profile} alt="" style={{width:"30px", height:"30px"}}/>
+          <div className="texts">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore tenetur soluta necessitatibus inventore cum, ea minima? Suscipit assumenda maxime explicabo soluta laborum.
+            </p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+        <div ref={endRef}></div>
+      </div>
       <div className="bottom">
         <div className="iconn">
           <GoImage style={{cursor:"pointer"}}/>

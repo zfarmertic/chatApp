@@ -15,7 +15,7 @@
 }
 .searchBar{
     flex: 1;
-    background: rgba(2, 84, 64, 0.5);
+    background: rgba(1, 158, 119, 0.5);
     display:flex;
     align-items: center;
     gap: 10px;
@@ -30,11 +30,7 @@
         color: white;
     }
 }
-.add{
-    background: rgba(2, 84, 64, 0.5);
-    border-radius: 5px;
-    cursor: pointer;
-}
+
 .item{
     display: flex;
     align-items: center;
@@ -54,4 +50,10 @@ span{
 p{
     font-size: 14px;
     font-weight: 300;
+}
+.add{
+    background: rgba(1, 158, 119, 0.5);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 3px;
 }

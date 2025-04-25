@@ -1,3 +1,95 @@
 .detail{
     flex: 1;
+   overflow: scroll;
+
+    .user{
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        border-bottom: 1px solid #d3c3c3;
+    }
+}
+.detail::-webkit-scrollbar{
+    display: none;
+    width:0;
+    height: 0;
+}
+.info{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.option{
+
+   
+
+
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        img{
+            width: 30px;
+            height: 30px;
+            background-color: rgba(4, 96, 4, 0.75);
+            border-radius: 50%;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        
+        
+    }
+    
+}
+.photItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.photos{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+
+        span{
+            font-size: 14px;
+            color: lightgrey;
+            font-weight: 300;
+        }
+   
+}
+.photDetail{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(4, 96, 4, 0.75);
+    cursor: pointer;
+    object-fit: cover;
+    padding: 5px;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+.logOut{
+    padding: 10px;
+    background-color: rgba(11, 206, 11, 0.75);
 }
